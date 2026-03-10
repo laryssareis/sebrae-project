@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project - Sebrae</title>
+    <link rel="stylesheet" href="/css/stylesheet.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="cover">
+
+        <div class="cover-bg active bg-all" id="bg1"></div>
+        <div class="cover-bg" id="bg2"></div>
+
+    </div>
+
+    <!--HOME PAGE MENUS-->
+    <div class="menu">
+        <button onclick="filterItems('serie')">Series</button>
+        <button onclick="filterItems('movie')">Movies</button>
+        <button onclick="filterItems('all')">All</button>
+    </div>
+
+    <!--CONTAINER WITH THE MOVIES AND SERIES-->
+
+    <div class="container">
+
+        <div class="item serie">
+
+            <a href="./seriesSection/friends.html" target="_blank"><img src="./img/friends.jpg"
+                    alt="Friends' cover"></a>
+
+        </div>
+
+        <div class="item movie">
+
+            <a href="./moviesSection/harryPotter.html" target="_blank"><img src="./img/harryPotterCover.jpg"
+                    alt="Harry Potter's cover"></a>
+
+        </div>
+
+    </div>
+
+    <!--LINK TO THE JAVASCRIPT FILE-->
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

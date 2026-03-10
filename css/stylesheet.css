@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   
+   background-color: black;
+   color: white;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.cover{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cover-bg{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.cover-bg.active{
+    opacity:1;
+}
+
+.bg-all{
+    background: radial-gradient(circle at 0% 0%, #000000,#02005c,#000000,#724a76);
+}
+
+.bg-movie{
+    background: radial-gradient(circle at 0% 0%, #000000,#02005c,#000000,#02005c);
+}
+
+.bg-serie{
+    background: radial-gradient(circle at 0% 0%, #000000,#724a76,#000000,#724a76);
+}
+
+.cover::after {
+    content:'';
+    position: absolute;
+    bottom: 0; /*alinha o início do gradiente ao final da imagem*/
+
+    left:0;
+    width: 100%;
+    height: 80%; /*Define que o esfumado ocupe metado da imagem*/
+
+    /*Faz o degradê do transparente para o seu azul escuro*/
+    background: linear-gradient(to bottom, transparent,black);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+button{
+    padding:12px 25px;
+    border-radius: 25px;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+button:hover{
+    background-color: gray;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.item img{
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img:hover{
+    transform: scale(1.08);
+}
