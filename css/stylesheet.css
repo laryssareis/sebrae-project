@@ -1,14 +1,30 @@
+/*1º procedimento de responsividade: Para fazer as margens surmirem*/
+
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
 }
 
+/* root serve para declarar as variáveis para guardar cores, isso facilita a colocação das cores*/
+
+:root{
+    --cor0: #000000;
+    --cor1: #ffffff;
+    --cor2: #02005c;
+    --cor3: #724a76;
+    --cor4: #808080;
+    --cor5: #e02626;
+    --cor6: #ffc715;
+    --cor7: #00a6eb;
+}
+
 body{
-   
-   background-color: black;
-   color: white;
+   /* Ao usar var() chamamos a cor pela variável criada em root */
+   background-color: var(--cor0);
+   color: var(--cor1);
    font-family: 'Times New Roman', Times, serif;
+   
 
 }
 
@@ -76,7 +92,7 @@ button{
 
 
 button:hover{
-    background-color: gray;
+    background-color: #808080;
     cursor: pointer;
 }
 
@@ -100,6 +116,52 @@ button:hover{
 
 .item img:hover{
     transform: scale(1.08);
+}
+
+/*Tablet*/
+
+@media(max-width:900px){
+    button{
+        font-size: 30px;
+    }
+
+    .paragraph-harry{
+        font-size: 40px;
+    }
+
+    .friends_title{
+        font-size: 70px;
+        letter-spacing: 20px;
+    }
+
+    .img-harry-potter-movies{
+        grid-template-columns: repeat(2fr);
+        gap: 40px;
+    }
+}
+
+/*Celular*/
+
+@media (max-width:600px){
+    button{
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    .friends_title{
+        font-size: 40px;
+        letter-spacing: 10px;
+        word-spacing: 10px;
+    }
+
+    .paragraph-harry{
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .img-harry-potter-movies{
+        grid-template-columns: 1fr;
+    }
 }
 
 /*Harry Potter Style*/
