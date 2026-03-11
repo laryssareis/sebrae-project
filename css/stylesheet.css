@@ -99,7 +99,8 @@ button:hover{
 .container{
     display: flex;
     justify-content: center;
-    align-items: center;    
+    align-items: center; 
+    flex-wrap: wrap;   
 }
 
 .item{
@@ -116,52 +117,6 @@ button:hover{
 
 .item img:hover{
     transform: scale(1.08);
-}
-
-/*Tablet*/
-
-@media(max-width:900px){
-    button{
-        font-size: 30px;
-    }
-
-    .paragraph-harry{
-        font-size: 40px;
-    }
-
-    .friends_title{
-        font-size: 70px;
-        letter-spacing: 20px;
-    }
-
-    .img-harry-potter-movies{
-        grid-template-columns: repeat(2fr);
-        gap: 40px;
-    }
-}
-
-/*Celular*/
-
-@media (max-width:600px){
-    button{
-        font-size: 20px;
-        padding: 10px 15px;
-    }
-
-    .friends_title{
-        font-size: 40px;
-        letter-spacing: 10px;
-        word-spacing: 10px;
-    }
-
-    .paragraph-harry{
-        font-size: 24px;
-        padding: 20px;
-    }
-
-    .img-harry-potter-movies{
-        grid-template-columns: 1fr;
-    }
 }
 
 /*Harry Potter Style*/
@@ -273,3 +228,48 @@ button:hover{
     
 }
 
+/*Tablet*/
+
+@media(max-width:900px){
+    button{
+        font-size: 30px;
+    }
+
+    .paragraph-harry{
+        font-size: 40px;
+    }
+
+    .friends_title{
+        font-size: 70px;
+        letter-spacing: 20px;
+    }
+
+    .img-harry-potter-movies{
+        grid-template-columns: repeat(2,fr);
+        gap: 40px;
+    }
+}
+
+/*Celular*/
+
+@media (max-width:600px){
+    button{
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+
+    .friends_title{
+        font-size: 40px;
+        letter-spacing: 10px;
+        word-spacing: 10px;
+    }
+
+    .paragraph-harry{
+        font-size: 24px;
+        padding: 20px;
+    }
+
+    .img-harry-potter-movies{
+        grid-template-columns: 1fr;
+    }
+}
