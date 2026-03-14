@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Friends</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
 
 </head>
@@ -14,8 +15,8 @@
     <div class="hero">
 
         <!--IMAGEM PRINCIPAL-->
-        <img src="../img/friendsHead.avif" class="img"
-            alt="This is a cover of the TV series Friends where the characters are sitting in front of a fountain">
+
+        <img src="../img/friendsHead.avif" class="img-fluid" alt="This is a cover of the TV series Friends where the characters are sitting in front of a fountain">
 
     </div>
     <!--DESIGN DO TÍTULO DO SITE -->
@@ -44,9 +45,15 @@
             class="dot red"></span>i<span class="dot yellow"></span>s<span class="dot blue"></span>h
     </h1>
 
-    <nav>
+        <div class="btn-group-vertical" role="group">
+            
+            <input type="radio" class="btn-check" name="season" id="s1" checked>
+            <label class="btn season-btn" for="s1">Season 1</label>
 
-    </nav>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

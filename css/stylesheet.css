@@ -195,6 +195,33 @@ button:hover{
 .yellow{background-color: #ffc715;}
 .blue{background-color: #00a6eb;}
 
+.season-btn{
+    background-color: transparent !important;
+    border: none !important;
+    color: white;
+    text-align: left;
+    position: relative;
+    padding-left: 15px; /* Espaço para a barra */
+    width: 100%;
+    margin-left: 20px;
+}
+
+.season-btn::before {
+    content: "";
+    position:absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background-color: #94549b;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.btn-check:checked + .season-btn::before{
+    opacity: 1;
+}
+
 
 /*Harry Potter and Friends Style*/
 
