@@ -137,6 +137,24 @@ button:hover{
     
 }
 
+.harry-movies{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+
+.harry-movies img{
+    width: 100%;
+    border-radius: 25px;
+    transition: transform 0.3s ease;
+}
+
+.harry-movies img:hover{
+    transform: scale(1.05);
+}
+
 /*Friends Style*/
 
 @font-face {
