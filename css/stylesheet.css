@@ -137,24 +137,6 @@ button:hover{
     
 }
 
-.img-harry-potter-movies{
-    display: grid; /*Os elementos são organizados em linhas e colunas*/
-
-    grid-template-columns: repeat(3,1fr);/*Cria (3,..) colunas, cada coluna ocupa uma fração do espaço disponível, ficando do mesmo tamanho */
-
-    gap: 100px; /*cria espaço entre os elementos (horizontal e vertical)*/ 
-
-    max-width: 1200px; /*Define a largura máxima*/
-
-    margin: 70px auto;
-}
-
-.img-harry-potter-movies img{
-    width: 100%;
-    height: auto;
-    border-radius: 50px;
-}
-
 /*Friends Style*/
 
 @font-face {
@@ -226,7 +208,7 @@ button:hover{
 .hero {
     position: relative;
     width:100%;
-    line-height: 0;
+    line-height: 0; /*Remove o espaço em branco que pode aparecer abaixo da imagem*/
 }
 
 .hero img{
