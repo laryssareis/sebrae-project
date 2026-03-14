@@ -96,7 +96,7 @@ button:hover{
     cursor: pointer;
 }
 
-.container{
+.movies-container{
     display: flex;
     justify-content: center;
     align-items: center; 
