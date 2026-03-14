@@ -168,7 +168,6 @@ button:hover{
 .friends_title {
     color: #ffff;
     font-family: 'FriendsFont', sans-serif;
-    font-size: 50px;
     text-align: center;
 
     line-height: 1.8; /*Aumenta o espaço entre a linha de cima e a de baixo*/
@@ -182,8 +181,8 @@ button:hover{
 
 .dot{
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     margin: 0 10px; /*O primeiro número é cima/baixo, o segundo é esquerda/direita*/
     vertical-align: middle;
