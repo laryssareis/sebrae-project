@@ -84,7 +84,7 @@ button{
     border: 0;
     background-color: transparent;
     color: white;
-    font-size: clamp(16px, 4vw, 40px);
+    font-size: clamp(18px, 4vw, 40px);
     font-weight: bold;
     transition: 0.3s;
 }
