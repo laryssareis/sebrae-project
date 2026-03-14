@@ -99,8 +99,7 @@ button:hover{
 .content-container{
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px; 
+    align-items: center; 
 }
 
 .item{
