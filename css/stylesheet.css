@@ -85,7 +85,7 @@ button{
     border: 0;
     background-color: transparent;
     color: white;
-    font-size: clamp(16px,4vw,40px);
+    font-size: 50px;
     font-weight: bold;
     transition: 0.3s;
 }
@@ -96,7 +96,7 @@ button:hover{
     cursor: pointer;
 }
 
-.content-container{
+.container{
     display: flex;
     justify-content: center;
     align-items: center; 
@@ -134,26 +134,25 @@ button:hover{
 
 .paragraph-harry{
     text-align: center;
-    margin: 30px 30px;
     
 }
 
-.harry-movies{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
-    max-width: 1200px;
-    margin: 60px auto;
+.img-harry-potter-movies{
+    display: flex; /*Os elementos são organizados em linhas e colunas*/
+
+    grid-template-columns: repeat(3,1fr);/*Cria (3,..) colunas, cada coluna ocupa uma fração do espaço disponível, ficando do mesmo tamanho */
+
+    gap: 100px; /*cria espaço entre os elementos (horizontal e vertical)*/ 
+
+    max-width: 1200px; /*Define a largura máxima*/
+
+    margin: 70px auto;
 }
 
-.harry-movies img{
+.img-harry-potter-movies img{
     width: 100%;
-    border-radius: 25px;
-    transition: transform 0.3s ease;
-}
-
-.harry-movies img:hover{
-    transform: scale(1.05);
+    height: auto;
+    border-radius: 50px;
 }
 
 /*Friends Style*/
