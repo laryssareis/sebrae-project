@@ -133,25 +133,23 @@ button:hover{
 
 .paragraph-harry{
     text-align: center;
-    
+    /*padding: 50px 20px;*/
+    margin: 40px 40px ;
 }
 
-.img-harry-potter-movies{
-    display: flex; /*Os elementos são organizados em linhas e colunas*/
-
-    grid-template-columns: repeat(3,1fr);/*Cria (3,..) colunas, cada coluna ocupa uma fração do espaço disponível, ficando do mesmo tamanho */
-
-    gap: 100px; /*cria espaço entre os elementos (horizontal e vertical)*/ 
-
-    max-width: 1200px; /*Define a largura máxima*/
-
-    margin: 70px auto;
+.hp-cover{
+    width:100%;
+    border-radius:15px;
+    transition: transform 0.3s ease;
 }
 
-.img-harry-potter-movies img{
-    width: 100%;
-    height: auto;
-    border-radius: 50px;
+.hp-cover:hover{
+    transform: scale(1.06);
+}
+
+.row{
+    max-width:1100px;
+    margin:auto;
 }
 
 /*Friends Style*/
@@ -178,8 +176,8 @@ button:hover{
 
 .dot{
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     margin: 0 10px; /*O primeiro número é cima/baixo, o segundo é esquerda/direita*/
     vertical-align: middle;
@@ -225,7 +223,8 @@ button:hover{
 .hero {
     position: relative;
     width:100%;
-    line-height: 0; /*Remove o espaço em branco que pode aparecer abaixo da imagem*/
+    line-height: 0; /* Remove o espaço em branco que pode aparecer abaixo da imagem */
+
 }
 
 .hero img{
@@ -233,7 +232,6 @@ button:hover{
     height: auto;
     object-fit: cover;
 }
-
 
 .hero::after {
     content:'';
