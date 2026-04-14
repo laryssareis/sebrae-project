@@ -19,6 +19,70 @@
     --cor7: #00a6eb;
 }
 
+/*Página de login*/
+
+.container-login-cadastro{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: var(--cor0);
+    font-size: 18px;
+    text-align: center;
+    height: 100vh;
+}
+
+.container-login-cadastro form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--cor1);
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+}
+
+.container-login-cadastro input{
+    padding: 10px;
+    border-radius: 1px;
+    border: none;
+    border-bottom: #724a76 1px solid;
+}
+
+select{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 8px;
+    border: 1px solid #724a76;
+}
+
+option{
+    font-size: 30px;
+}
+
+textarea{
+    border: 1px solid #724a76;
+}
+
+.btn-primary{
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--cor3);
+    border: none;
+}
+
+.btn-primary a{
+    color: var(--cor1);
+    text-decoration: none;
+}
+
+.btn-primary:hover{
+    background: radial-gradient(circle at 0% 0%,#02005c,#724a76);
+    border:none;
+}
+
+/*Página Inicial*/
+
 body{
    /* Ao usar var() chamamos a cor pela variável criada em root */
    background-color: var(--cor0);
@@ -117,6 +181,16 @@ button:hover{
     transform: scale(1.08);
 }
 
+.logo{
+    position: absolute;
+    left: 50%; /*leva a logo pro meio*/
+    bottom: 20px; /*Centraliza horizontalmente*/
+    z-index: 10; /*garante que fique acima do gradiente*/
+    transform: translateX(-50%); /*Corrige o alinhamento (centralização real)*/
+    
+    /*width:140px; deixa logo menor*/
+}
+
 /*Harry Potter Style*/
 
 .img-harry-potter-name{
@@ -172,6 +246,8 @@ button:hover{
     padding-left: 8px; /*Garante que o texto fique centralizado mesmo com o espaço extra no final*/
 
     word-spacing: 30px; /*Aumenta o espaço toda vez que der "espaço" no teclado*/
+
+    margin-bottom: 50px; /* Mais espaço abaixo do título */
 }
 
 
@@ -196,26 +272,97 @@ button:hover{
     color: white;
     text-align: left;
     position: relative;
-    padding-left: 15px; /* Espaço para a barra */
-    width: 100%;
-    margin: 80px 30px 10px 30px;
+    padding-left: 15px 10px; /* Espaço para a barra */
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    margin-bottom: 5px;
+    border-radius: 0 !important; /*Tira cantos arredondados*/
 }
+
+/*Remove o estilo padrão de 'pill' do Bootstrap*/
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: transparent !important;
+}
+
+/* A barrinha roxa lateral quando estiver ativo*/
 
 .season-btn::before {
     content: "";
     position:absolute;
-    left: 0;
-    top: 0;
-    height: 100%;
+    left: -20px; /*Empura a barra para fora do botão, perto da borda*/
+    top: 5px;
+    height: calc(100% - 10px); /*Deixa um pouco menor que o botão*/
     width: 3px;
     background-color: #94549b;
     opacity: 0;
     transition: 0.3s;
 }
 
-.btn-check:checked + .season-btn::before{
-    opacity: 1;
+.season-btn.active::before{
+    opacity: 1; /*Mostra a barra quando o botão está ativo*/
 }
+
+.season-btn.active, .season-btn:hover{
+    color: #ddd !important; /*Muda levemente a cor no hover/ativo*/
+}
+
+/*--- ÁREA DE EPISÓDIOS (DIREITA) ---*/
+
+.episodes-container{
+    max-height: 80vh; /*Altura máxima para ativar o scroll*/
+    overflow-y: auto;/*Scroll vertical se houver muitos episódios*/
+    padding-right: 20px;
+}
+
+/*Estilizando a barra de scroll*/
+
+.episodes-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.episodes-container::-webkit-scrollbar-track{
+    background: #222; /*Fundo do track*/
+}
+
+.episodes-container::-webkit-scrollbar-thumb{
+    background: #444; /*Cor da barra de scroll*/
+    border-radius: 4px;
+}
+
+/*--- CARD DO EPISÓDIO ---*/
+
+.episode-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Centraliza o card e o título*/
+}
+
+.episode-card:hover{
+    transform: scale(1.05); /*Pequeno zoom no hover*/
+}
+
+.episode-img{
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /*Garante que a imagem caiba no card*/
+}
+
+.episode-title{
+    font-size: 0.8rem;
+    padding-top: 10px;
+    max-width: 230px; /*Título não pode ser maior que o card*/
+}
+
+.main-content{
+    padding-left: 50px; /*Mais margem à esquerda*/
+}
+
+.season-list{
+    border-right: none; /*Remove bordas*/
+}
+
 
 
 /*Harry Potter and Friends Style*/

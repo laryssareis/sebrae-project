@@ -45,12 +45,53 @@
             class="dot red"></span>i<span class="dot yellow"></span>s<span class="dot blue"></span>h
     </h2>
 
-        <div class="btn-group-vertical" role="group">
-            
-            <input type="radio" class="btn-check" name="season" id="s1" checked>
-            <label class="btn season-btn" for="s1">Season 1</label>
+        <div class="container-fluid mt-5 mb-5 main-content">
+
+            <div class="row">
+
+                <div class="col-md-3">
+
+                    <div class="nav flex-column nav-pills seasons-list" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+                        <button class="nav-link active season-btn" id="s1-tab" data-bs-toggle="pill" data-bs-target="#s1-content" type="button" role="tab">Season 1</button>
+
+                        <button class="nav-link active season-btn" id="s2-tab" data-bs-toggle="pill" data-bs-target="#s2-content" type="button" role="tab">Season 2</button>
+
+                    </div>
+                </div>
+
+                <div class="col-md-9 episodes-container">
+
+                    <div class="tab-content" id="v-pills-tabContent">
+
+                        <div class="tab-pane fade show active" id="s1-content" role="tabpanel">
+                            
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                                <div class="col episode-col">
+                                    <figure>
+                                        <img src="../img/friendsCover.png" class="episode-img" alt="frieds cover">
+                                        <figcaption class="episode-title text-center text-white mt-2">The one where Monica gets a roommate</figcaption>
+                                    </figure>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
+            
+        <!--<input type="radio" class="btn-check" name="season" id="s1" checked>
+            <label class="btn season-btn" for="s1">Season 1</label>-->
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
