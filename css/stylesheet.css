@@ -187,7 +187,7 @@ button:hover{
     bottom: 20px; /*Centraliza horizontalmente*/
     z-index: 10; /*garante que fique acima do gradiente*/
     transform: translateX(-50%); /*Corrige o alinhamento (centralização real)*/
-    width: 200px; /*o width deixa logo menor */ 
+    width: 250px; /*o width deixa logo menor */ 
     transition: width 0.3s ease; /*Efeito suave ao mudar de tamanho*/
 }
 
