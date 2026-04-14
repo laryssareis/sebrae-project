@@ -187,8 +187,7 @@ button:hover{
     bottom: 20px; /*Centraliza horizontalmente*/
     z-index: 10; /*garante que fique acima do gradiente*/
     transform: translateX(-50%); /*Corrige o alinhamento (centralização real)*/
-    
-    /*width:140px; deixa logo menor*/
+    width:140px; /*deixa logo menor*/
 }
 
 /*Harry Potter Style*/
