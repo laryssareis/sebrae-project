@@ -187,16 +187,16 @@ button:hover{
     bottom: 20px; /*Centraliza horizontalmente*/
     z-index: 10; /*garante que fique acima do gradiente*/
     transform: translateX(-50%); /*Corrige o alinhamento (centralização real)*/
-    width: 80px; /*o width deixa logo menor */ 
+    width: 500px; /*o width deixa logo menor */ 
     transition: width 0.3s ease; /*Efeito suave ao mudar de tamanho*/
 }
 
-@media (min-width: 992px) {
+/*@media (min-width: 992px) {
     .logo{
-        width: 150px; /*Logo maior no PC*/
+        width: 150px; /*Logo maior no PC
         bottom: 40PX;
     }
-}
+}*/
 
 /*Harry Potter Style*/
 
