@@ -187,7 +187,7 @@ button:hover{
     bottom: 20px; /*Centraliza horizontalmente*/
     z-index: 10; /*garante que fique acima do gradiente*/
     transform: translateX(-50%); /*Corrige o alinhamento (centralização real)*/
-    width:140px; /*deixa logo menor*/
+    width:140px !important; /*o width deixa logo menor, e o important declara que essa definição é importante, não deixando o bootstrap sobrecarrega-la e garantindo que ela vai prevalecer */ 
 }
 
 /*Harry Potter Style*/
