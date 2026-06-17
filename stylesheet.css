@@ -1,0 +1,448 @@
+/*1º procedimento de responsividade: Para fazer as margens surmirem*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* root serve para declarar as variáveis para guardar cores, isso facilita a colocação das cores*/
+
+:root{
+    --cor0: #000000;
+    --cor1: #ffffff;
+    --cor2: #02005c;
+    --cor3: #724a76;
+    --cor4: #808080;
+    --cor5: #e02626;
+    --cor6: #ffc715;
+    --cor7: #00a6eb;
+    --cor8: #2d363960;
+}
+
+/*Página de login*/
+
+.container-login-cadastro{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    color: var(--cor0);
+    font-size: 18px;
+    text-align: center;
+    height: 100vh;
+}
+
+.container-login-cadastro form{
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+    background-color: var(--cor1);
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    /*background-color: var(--cor8);*/
+}
+
+.container-login-cadastro input{
+    padding: 10px;
+    border-radius: 1px;
+    border: none;
+    border-bottom: #724a76 1px solid;
+}
+
+select{
+    appearance: none;
+    -webkit-appearance: none;
+    padding: 8px;
+    border: 1px solid #724a76;
+}
+
+option{
+    font-size: 30px;
+}
+
+textarea{
+    border: 1px solid #724a76;
+}
+
+.btn-primary{
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: var(--cor3);
+    border: none;
+}
+
+.btn-primary a{
+    color: var(--cor1);
+    text-decoration: none;
+}
+
+.btn-primary:hover{
+    background: radial-gradient(circle at 0% 0%,#02005c,#724a76);
+    border:none;
+}
+
+/*Página Inicial*/
+
+body{
+   /* Ao usar var() chamamos a cor pela variável criada em root */
+   background-color: var(--cor0);
+   color: var(--cor1);
+   font-family: 'Times New Roman', Times, serif;
+   
+
+}
+
+.cover{
+    position: relative;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.cover-bg{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+.cover-bg.active{
+    opacity:1;
+}
+
+.bg-all{
+    background: radial-gradient(circle at 0% 0%, #000000,#02005c,#000000,#724a76);
+}
+
+.bg-movie{
+    background: radial-gradient(circle at 0% 0%, #000000,#02005c,#000000,#02005c);
+}
+
+.bg-serie{
+    background: radial-gradient(circle at 0% 0%, #000000,#724a76,#000000,#724a76);
+}
+
+.cover::after {
+    content:'';
+    position: absolute;
+    bottom: 0; /*alinha o início do gradiente ao final da imagem*/
+
+    left:0;
+    width: 100%;
+    height: 80%; /*Define que o esfumado ocupe metado da imagem*/
+
+    /*Faz o degradê do transparente para o seu azul escuro*/
+    background: linear-gradient(to bottom, transparent,black);
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: clamp(10px, 3vw, 40px);
+    margin: 50px 0;
+}
+
+button{
+    padding:12px 25px;
+    border-radius: 25px;
+    border: 0;
+    background-color: transparent;
+    color: white;
+    font-size: clamp(20px, 4vw, 40px);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+
+button:hover{
+    background-color: #808080;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.item{
+    width: 100%;
+    max-width: 320px;
+}
+
+.item img{
+    width: 100%;
+    padding: 20px 20px 20px 20px;
+    border-radius: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item img:hover{
+    transform: scale(1.08);
+}
+
+.logo{
+    position: absolute;
+    left: 50%; /*leva a logo pro meio*/
+    bottom: 20px; /*Centraliza horizontalmente*/
+    z-index: 10; /*garante que fique acima do gradiente*/
+    transform: translateX(-50%); /*Corrige o alinhamento (centralização real)*/
+    width: 300px; /*o width deixa logo menor */ 
+    transition: width 0.3s ease; /*Efeito suave ao mudar de tamanho*/
+}
+
+
+.offcanvas-title{
+    color: var(--cor1);
+}
+
+.offcanvas{
+    background-color: #724a76;
+}
+
+/*@media (min-width: 992px) {
+    .logo{
+        width: 150px; /*Logo maior no PC
+        bottom: 40PX;
+    }
+}*/
+
+/*Harry Potter Style*/
+
+.img-harry-potter-name{
+    position: absolute;
+    bottom: 2%;/*Ajusta a altura*/
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(60px 60px 55px rgba(0,0,0,0.5));/*filter: drop-shadow(horizontal vertical blur color)*/
+}
+
+.paragraph-harry{
+    text-align: center;
+    /*padding: 50px 20px;*/
+    font-size: 14pt;
+    margin: 40px 30px 20px 30px;
+}
+
+.hp-cover{
+    width:100%;
+    border-radius:15px;
+    transition: transform 0.3s ease;
+}
+
+.hp-cover:hover{
+    transform: scale(1.06);
+}
+
+.row{
+    max-width:1100px;
+    margin:auto;
+}
+
+/*Friends Style*/
+
+@font-face {
+    font-family: 'FriendsFont';
+    src: url('../css/fonts/GABRWFFR.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.friends_title {
+    color: #ffff;
+    font-family: 'FriendsFont', sans-serif;
+    text-align: center;
+
+    line-height: 1.8; /*Aumenta o espaço entre a linha de cima e a de baixo*/
+
+    padding-left: 8px; /*Garante que o texto fique centralizado mesmo com o espaço extra no final*/
+
+    word-spacing: 30px; /*Aumenta o espaço toda vez que der "espaço" no teclado*/
+
+    margin-bottom: 50px; /* Mais espaço abaixo do título */
+}
+
+
+.dot{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 10px; /*O primeiro número é cima/baixo, o segundo é esquerda/direita*/
+    vertical-align: middle;
+    position: relative;
+    top: -2px; /*Ajuste aqui para subir ou descer a bolinha se necessário*/
+}
+
+.red{background-color: #e02626;}
+.yellow{background-color: #ffc715;}
+.blue{background-color: #00a6eb;}
+
+.season-btn{
+    background-color: transparent !important;/*o important declara que essa definição é importante, não deixando o bootstrap sobrecarrega-la e garantindo que ela vai prevalecer */
+    border: none !important;
+    color: white;
+    text-align: left;
+    position: relative;
+    padding-left: 15px 10px; /* Espaço para a barra */
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    margin-bottom: 5px;
+    border-radius: 0 !important; /*Tira cantos arredondados*/
+}
+
+/*Remove o estilo padrão de 'pill' do Bootstrap*/
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    background-color: transparent !important;
+}
+
+/* A barrinha roxa lateral quando estiver ativo*/
+
+.season-btn::before {
+    content: "";
+    position:absolute;
+    left: -20px; /*Empura a barra para fora do botão, perto da borda*/
+    top: 5px;
+    height: calc(100% - 10px); /*Deixa um pouco menor que o botão*/
+    width: 3px;
+    background-color: #94549b;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.season-btn.active::before{
+    opacity: 1; /*Mostra a barra quando o botão está ativo*/
+}
+
+.season-btn.active, .season-btn:hover{
+    color: #ddd !important; /*Muda levemente a cor no hover/ativo*/
+}
+
+/*--- ÁREA DE EPISÓDIOS (DIREITA) ---*/
+
+.episodes-container{
+    max-height: 80vh; /*Altura máxima para ativar o scroll*/
+    overflow-y: auto;/*Scroll vertical se houver muitos episódios*/
+    padding-right: 20px;
+}
+
+/*Estilizando a barra de scroll*/
+
+.episodes-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.episodes-container::-webkit-scrollbar-track{
+    background: #222; /*Fundo do track*/
+}
+
+.episodes-container::-webkit-scrollbar-thumb{
+    background: #444; /*Cor da barra de scroll*/
+    border-radius: 4px;
+}
+
+/*--- CARD DO EPISÓDIO ---*/
+
+.episode-col{
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Centraliza o card e o título*/
+}
+
+.episode-card:hover{
+    transform: scale(1.05); /*Pequeno zoom no hover*/
+}
+
+.episode-img{
+    border-radius: 20px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /*Garante que a imagem caiba no card*/
+}
+
+.episode-title{
+    font-size: 0.8rem;
+    padding-top: 10px;
+    max-width: 230px; /*Título não pode ser maior que o card*/
+}
+
+.main-content{
+    padding-left: 50px; /*Mais margem à esquerda*/
+}
+
+.season-list{
+    border-right: none; /*Remove bordas*/
+}
+
+
+
+/*Harry Potter and Friends Style*/
+
+
+.hero {
+    position: relative;
+    width:100%;
+    line-height: 0; /* Remove o espaço em branco que pode aparecer abaixo da imagem */
+
+}
+
+.hero img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero::after {
+    content:'';
+    position: absolute;
+    bottom: 0; /*alinha o início do gradiente ao final da imagem*/
+
+    left:0;
+    width: 100%;
+    height: 80%; /*Define que o esfumado ocupe metado da imagem*/
+
+    /*Faz o degradê do transparente para o seu azul escuro*/
+    background: linear-gradient(to bottom, transparent,black);
+    
+}
+
+/*Página Cadastro Conteúdo*/
+
+#tipo, #titulo{
+    text-align: left;
+}
+
+.selecionar option{
+    font-size: 16px;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.input-group input[type="file"] {
+    border-color: rgb(255, 255, 255);
+}
+
+#linha-roxa{
+    font-size: 24pt;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #94549b;
+}
+
+label{
+    text-align: left;
+}
+
+.card{
+    margin: 15px 50px;
+}
